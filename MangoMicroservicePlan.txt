@@ -1,0 +1,40 @@
+
+Put all plan and code in ~/.openclaw/workspace/MyVersion/Mango_Microservices
+Send me every 10 minutes of the update and progress with percentage. Send it to my telegram.
+Put this plan in memory and write the plan in markdown
+Always audit the markdown created.
+Yes to all prompt messages and do not stop and   
+For Agent and SubAgent working on this, To avoid exceeding the API's rate limit further for LLM Models or cooldown, setup a retry session that allows the code to automatically retry requests if they fail due to specific status codes (500, 502, 504). The backoff_factor gradually increases the delay between retries. Implements a retry mechanism with exponential backoff to limit the frequency of retry attempts.  
+Create a plan and build Below requirements. Use the latest tech for .Net, use .Net 10
+The Architectural design must be Grade A+
+ 
+
+• Mango Microservices is a full-stack e-commerce platform built with .NET microservices architecture, enabling scalable online shopping with modular services.
+• Mango.Web (http://mango.web/): ASP.NET (http://asp.net/) Core MVC frontend application that provides the user interface for browsing products, managing shopping carts, placing orders, and user authentication.
+• Mango.GatewaySolution: API Gateway that routes requests from the frontend to appropriate microservices, handling load balancing, authentication, and cross-cutting concerns.
+• Mango.Services.AuthAPI: Handles user registration, login, JWT token generation, and role-based authorization across the system.
+• Mango.Services.ProductAPI: Manages product catalog including CRUD operations for products, categories, and inventory tracking.
+• Mango.Services.ShoppingCartAPI: Manages user shopping carts, allowing add/remove items, quantity updates, and cart persistence.
+• Mango.Services.OrderAPI: Processes orders from carts, handles payment integration, order status tracking, and order history.
+• Mango.Services.EmailAPI: Sends transactional emails for order confirmations, password resets, and other notifications.
+• Mango.Services.CouponAPI: Manages discount coupons and promotional codes that can be applied to orders.
+• Mango.Services.RewardAPI: Implements customer loyalty program with reward points earned from purchases and redeemable for discounts.
+• Mango.MessageBus: Shared library providing asynchronous messaging between services using RabbitMQ for events like order placed, inventory updated, etc.
+• Overall Architecture: Uses event-driven communication for decoupling services, SQL Server for data persistence, JWT for security, and Docker/K8s for deployment scalability.
+
+• Backend Framework: ASP.NET (http://asp.net/) Core 8 (Web API and MVC)
+• Programming Language: C# (.NET 8)
+• Database: SQL Server (inferred from EF Core usage)
+• ORM: Entity Framework Core
+• API Gateway: Ocelot (likely, based on typical .NET microservices)
+• Message Broker: RabbitMQ
+• Authentication: JWT tokens and cookie-based auth
+• Object Mapping: AutoMapper
+• HTTP Client: HttpClient for inter-service communication
+• Configuration: appsettings.json with service URLs
+• Deployment: Docker and Kubernetes (inferred from microservices best practices)
+• Version Control: Git
+• Build Tool: MSBuild (via .csproj files)
+• Package Management: NuGet
+The stack follows modern .NET microservices patterns with event-driven architecture and containerized deployment.
+

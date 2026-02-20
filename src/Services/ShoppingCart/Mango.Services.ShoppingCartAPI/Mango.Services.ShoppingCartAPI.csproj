@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Mango.Services.ShoppingCartAPI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Riok.Mapperly" Version="4.0.0" />
+    <PackageReference Include="Polly" Version="8.4.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Mango.Contracts\Mango.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Mango.MessageBus\Mango.MessageBus.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Mango.SharedKernel\Mango.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>
